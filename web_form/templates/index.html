@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <title>Addresses</title>
+</head>
+<body>
+    <section class='container mt-2'>
+    {% load widget_tweaks %}
+    
+    <h1>Addresses</h1>
+    
+    <p>Seu CEP é: {{ form.cep.value }}</p>
+    <p>Sua Rua é: {{ form.rua.value }}</p>
+    <p>Seu Bairro é: {{ form.bairro.value }}</p>
+    <p>Seu Número Residencial é: {{ form.num.value }}</p>
+    <p>Seu Número Complementar é: {{ form.numcompl.value }}</p>
+    <p>Seu Estado é: {{ form.estado.value }}</p>
+    <p>Seu UF é: {{ form.uf.value }}</p>
+    <p>Sua Descrição é: {{ form.descricao.value }}</p>
+    <a class="btn btn-success" href={% url 'cadastro' %} role="button">Cadastrar</a>
+
+    </section>
+</body>
+</html>
